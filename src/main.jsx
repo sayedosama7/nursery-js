@@ -1,8 +1,7 @@
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom"; // استبدل createBrowserRouter بـ HashRouter
 import React from "react";
 import Layout from "./Components/Layout/Layout.jsx";
-import App from "./App";
 import Services from './Pages/Services/Services.jsx';
 import Report from './Pages/Report/Report';
 import Dashboard from './Pages/Dashboard/Dashboard';
@@ -15,65 +14,28 @@ import Discount from "./Pages/Discount/Discount.jsx";
 import Parent from "./Pages/Parent/Parent.jsx";
 import ServicesType from "./Pages/ServicesType/ServicesType.jsx";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout><App /></Layout>, // Wrap App with Layout
-    children: [
-      {
-        path: "/",
-        element: <Dashboard />
-      },
-      {
-        path: "/services",
-        element: <Services />
-      },
-      {
-        path: "/services-type",
-        element: <ServicesType />
-      },
-      {
-        path: "/report",
-        element: <Report />
-      },
-      {
-        path: "/student",
-        element: <Student />
-      },
-      {
-        path: "/teacher",
-        element: <Teacher />
-      },
-      {
-        path: "/class",
-        element: <Class />
-      },
-      {
-        path: "/nursery",
-        element: <Nursery />
-      },
-      {
-        path: "/reservation",
-        element: <Reservation />
-      },
-      {
-        path: "/discount",
-        element: <Discount />
-      },
-      {
-        path: "/parent",
-        element: <Parent />
-      },
-    ]
-  }
-]);
-
 const rootElement = document.getElementById("root");
 
 if (rootElement) {
   createRoot(rootElement).render(
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <HashRouter> {/* استخدم HashRouter هنا */}
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services-type" element={<ServicesType />} />
+            <Route path="/report" element={<Report />} />
+            <Route path="/student" element={<Student />} />
+            <Route path="/teacher" element={<Teacher />} />
+            <Route path="/class" element={<Class />} />
+            <Route path="/nursery" element={<Nursery />} />
+            <Route path="/reservation" element={<Reservation />} />
+            <Route path="/discount" element={<Discount />} />
+            <Route path="/parent" element={<Parent />} />
+          </Routes>
+        </Layout>
+      </HashRouter>
     </React.StrictMode>
   );
 } else {
