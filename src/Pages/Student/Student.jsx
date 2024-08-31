@@ -171,12 +171,11 @@ const Student = () => {
 
                             {/* medical file  */}
                             <div className='col-md-6 mt-4'>
+                                <InputLabel htmlFor="medical-file">medical file</InputLabel>
                                 <FormControl fullWidth variant="outlined" size='small'>
-                                    <InputLabel htmlFor="medical-file">medical file</InputLabel>
                                     <OutlinedInput
                                         id="medical-file"
                                         margin="dense"
-                                        label="medical file"
                                         type='file'
                                     />
                                 </FormControl>
@@ -184,12 +183,11 @@ const Student = () => {
 
                             {/* behavior file  */}
                             <div className='col-md-6 mt-4'>
+                                <InputLabel htmlFor="behavior-file">behavior file</InputLabel>
                                 <FormControl fullWidth variant="outlined" size='small'>
-                                    <InputLabel htmlFor="behavior-file">behavior file</InputLabel>
                                     <OutlinedInput
                                         id="behavior-file"
                                         margin="dense"
-                                        label="behavior file"
                                         type='file'
                                     />
                                 </FormControl>

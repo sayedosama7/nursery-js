@@ -109,8 +109,8 @@ const Nursery = () => {
                     autoFocus
                     margin="dense"
                     label="Nursery Name"
-                    value={nurseryDetails.name}
-                    onChange={handleChange}
+                  // value={nurseryDetails.name}
+                  // onChange={handleChange}
                   />
                 </FormControl>
               </div>
@@ -123,8 +123,8 @@ const Nursery = () => {
                     id="address"
                     margin="dense"
                     label="address"
-                    value={nurseryDetails.address}
-                    onChange={handleChange}
+                  // value={nurseryDetails.address}
+                  // onChange={handleChange}
                   />
                 </FormControl>
               </div>
@@ -138,8 +138,8 @@ const Nursery = () => {
                     margin="dense"
                     label="Nursery email"
                     type='email'
-                    value={nurseryDetails.email}
-                    onChange={handleChange}
+                  // value={nurseryDetails.email}
+                  // onChange={handleChange}
                   />
                 </FormControl>
               </div>
@@ -153,17 +153,17 @@ const Nursery = () => {
                     margin="dense"
                     label="Nursery phone"
                     type='tel'
-                    value={nurseryDetails.phone}
-                    onChange={handleChange}
+                  // value={nurseryDetails.phone}
+                  // onChange={handleChange}
                   />
                 </FormControl>
               </div>
 
               {/* Nursery working hours  */}
               <div className="row">
-                <h6 className='mt-3 text-primary mb-3'>working hours</h6>
+                <h6 className='text-primary my-4'>working hours</h6>
                 {/* Nursery working hours  from */}
-                <div className='col-md-6'>
+                <div className='col-md-6 mb-3'>
                   <FormControl fullWidth variant="outlined" size='small'>
                     <InputLabel htmlFor="Nursery phone">from</InputLabel>
                     <OutlinedInput
@@ -171,14 +171,14 @@ const Nursery = () => {
                       margin="dense"
                       label="Nursery from"
                       type='time'
-                      value={nurseryDetails.workingHoursFrom}
-                      onChange={handleChange}
+                    // value={nurseryDetails.workingHoursFrom}
+                    // onChange={handleChange}
                     />
                   </FormControl>
                 </div>
 
                 {/* Nursery working hours to  */}
-                <div className='col-md-6'>
+                <div className='col-md-6 mb-3'>
                   <FormControl fullWidth variant="outlined" size='small'>
                     <InputLabel htmlFor="Nursery phone">to</InputLabel>
                     <OutlinedInput
@@ -186,8 +186,8 @@ const Nursery = () => {
                       margin="dense"
                       label="Nursery from"
                       type='time'
-                      value={nurseryDetails.workingHoursTo}
-                      onChange={handleChange}
+                    // value={nurseryDetails.workingHoursTo}
+                    // onChange={handleChange}
                     />
                   </FormControl>
                 </div>
@@ -195,10 +195,10 @@ const Nursery = () => {
 
               {/* Nursery Extra working hours  */}
               <div className="row">
-                <h6 className='mt-3 text-primary mb-3'>extra working hours</h6>
+                <h6 className='text-primary my-3'>extra working hours</h6>
 
                 {/* Nursery Extra working hours from  */}
-                <div className='col-md-6'>
+                <div className='col-md-6 mb-3'>
                   <FormControl fullWidth variant="outlined" size='small'>
                     <InputLabel htmlFor="Nursery phone">from</InputLabel>
                     <OutlinedInput
@@ -206,14 +206,14 @@ const Nursery = () => {
                       margin="dense"
                       label="Nursery from"
                       type='time'
-                      value={nurseryDetails.extraWorkingHoursFrom}
-                      onChange={handleChange}
+                    // value={nurseryDetails.extraWorkingHoursFrom}
+                    // onChange={handleChange}
                     />
                   </FormControl>
                 </div>
 
                 {/* Nursery Extra working hours to */}
-                <div className='col-md-6'>
+                <div className='col-md-6 mb-3'>
                   <FormControl fullWidth variant="outlined" size='small'>
                     <InputLabel htmlFor="Nursery phone">to</InputLabel>
                     <OutlinedInput
@@ -221,8 +221,8 @@ const Nursery = () => {
                       margin="dense"
                       label="Nursery from"
                       type='time'
-                      value={nurseryDetails.extraWorkingHoursTo}
-                      onChange={handleChange}
+                    // value={nurseryDetails.extraWorkingHoursTo}
+                    // onChange={handleChange}
                     />
                   </FormControl>
                 </div>

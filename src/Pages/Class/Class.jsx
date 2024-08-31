@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
@@ -19,8 +18,18 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 const Class = () => {
-
   const [open, setOpen] = React.useState(false);
+
+  // const [formData, setFormData] = React.useState({
+  //   selectedNursery: '',
+  //   className: '',
+  //   studentsAgeStage: '',
+  //   classType: '',
+  //   classServices: '',
+  //   classTeacher: '',
+  //   minimumStudents: '',
+  //   maximumStudents: ''
+  // });
 
   const handleClickOpen = () => {
     console.log("Opening Dialog");
@@ -36,11 +45,18 @@ const Class = () => {
     setOpen(false);
   };
 
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prevState => ({
+  //     ...prevState,
+  //     [name]: value
+  //   }));
+  // };
+
   return (
     <div>
       <div className="container">
         <div className="row">
-
           <div className="col-md-12">
             <h1 className="mb-4">Classes</h1>
           </div>
@@ -66,13 +82,11 @@ const Class = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-
                 <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                  <TableCell component="th" scope="row">
-                  </TableCell>
+                  <TableCell component="th" scope="row"></TableCell>
                   <TableCell align="center">baby class</TableCell>
                   <TableCell align="center">10 month</TableCell>
-                  <TableCell align="center">Tomorrow's flowers</TableCell>
+                  <TableCell align="center">Tomorrow flowers</TableCell>
                   <TableCell align="center">babies</TableCell>
                   <TableCell align="center">services</TableCell>
                   <TableCell align="center">sayed osama</TableCell>
@@ -82,24 +96,21 @@ const Class = () => {
               </TableBody>
             </Table>
           </TableContainer>
-
         </div>
       </div>
 
-      {/*add class Dialog */}
+      {/* Add class Dialog */}
       <Dialog
         open={open}
         keepMounted
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-
         <DialogTitle id="form-dialog-title">Add class</DialogTitle>
 
         <DialogContent>
           <div className='container'>
             <div className='row'>
-
               {/* class name  */}
               <div className='col-md-4 mt-4'>
                 <FormControl fullWidth variant="outlined" size='small'>
@@ -109,6 +120,9 @@ const Class = () => {
                     autoFocus
                     margin="dense"
                     label="Class Name"
+                    name="className"
+                  // value={formData.className}
+                  // onChange={handleChange}
                   />
                 </FormControl>
               </div>
@@ -116,29 +130,35 @@ const Class = () => {
               {/* students age stage  */}
               <div className='col-md-4 mt-4'>
                 <FormControl fullWidth variant="outlined" size='small'>
-                  <InputLabel htmlFor="students-age-stage">students age stage</InputLabel>
+                  <InputLabel htmlFor="students-age-stage">Students Age Stage</InputLabel>
                   <OutlinedInput
                     id="students-age-stage"
                     margin="dense"
-                    label="students age stage"
+                    label="Students Age Stage"
+                    name="studentsAgeStage"
+                  // value={formData.studentsAgeStage}
+                  // onChange={handleChange}
                   />
                 </FormControl>
               </div>
 
-              {/* nursery name  */}
+              {/* Nursery name */}
               <div className='col-md-4 mt-4'>
                 <FormControl fullWidth variant="outlined" size='small'>
-                  <InputLabel htmlFor="class-type">nursery name</InputLabel>
+                  <InputLabel htmlFor="nursery-name">
+                    Nursery Name
+                  </InputLabel>
                   <Select
                     id="nursery-name"
                     displayEmpty
-                    label="nursery name"
+                    name="selectedNursery"
+                    label='Nursery Name'
+                  // value={formData.selectedNursery}
+                  // onChange={handleChange}
                   >
-                    <MenuItem value=''>
-                      <em>nursery name</em>
-                    </MenuItem>
-                    <MenuItem value=''>nursery 1</MenuItem>
-                    <MenuItem value=''>nursery 2</MenuItem>
+                    <MenuItem value='nursery1'>choose Nursery name</MenuItem>
+                    <MenuItem value='nursery1'>Nursery 1</MenuItem>
+                    <MenuItem value='nursery2'>Nursery 2</MenuItem>
                   </Select>
                 </FormControl>
               </div>
@@ -152,12 +172,12 @@ const Class = () => {
                     id="class-type"
                     displayEmpty
                     label="Class Type"
+                    name="classType"
+                  // value={formData.classType}
+                  // onChange={handleChange}
                   >
-                    <MenuItem value=''>
-                      choose Class Type
-                    </MenuItem>
-                    <MenuItem value=''>Type 1</MenuItem>
-                    <MenuItem value=''>Type 2</MenuItem>
+                    <MenuItem value='type1'>Type 1</MenuItem>
+                    <MenuItem value='type2'>Type 2</MenuItem>
                   </Select>
                 </FormControl>
               </div>
@@ -165,17 +185,17 @@ const Class = () => {
               {/* class services  */}
               <div className='col-md-4 mt-4'>
                 <FormControl fullWidth variant="outlined" size='small'>
-                  <InputLabel htmlFor="class-type">Class services</InputLabel>
+                  <InputLabel htmlFor="class-services">Class Services</InputLabel>
                   <Select
                     id="class-services"
                     displayEmpty
-                    label="Class services"
+                    label="Class Services"
+                    name="classServices"
+                  // value={formData.classServices}
+                  // onChange={handleChange}
                   >
-                    <MenuItem value=''>
-                      <em>Class services</em>
-                    </MenuItem>
-                    <MenuItem value=''>services 1</MenuItem>
-                    <MenuItem value=''>services 2</MenuItem>
+                    <MenuItem value='services1'>Services 1</MenuItem>
+                    <MenuItem value='services2'>Services 2</MenuItem>
                   </Select>
                 </FormControl>
               </div>
@@ -188,12 +208,12 @@ const Class = () => {
                     id="class-teacher"
                     displayEmpty
                     label="Class Teacher"
+                    name="classTeacher"
+                  // value={formData.classTeacher}
+                  // onChange={handleChange}
                   >
-                    <MenuItem value=''>
-                      <em>Class Teacher</em>
-                    </MenuItem>
-                    <MenuItem value=''>Teacher 1</MenuItem>
-                    <MenuItem value=''>Teacher 2</MenuItem>
+                    <MenuItem value='teacher1'>Teacher 1</MenuItem>
+                    <MenuItem value='teacher2'>Teacher 2</MenuItem>
                   </Select>
                 </FormControl>
               </div>
@@ -201,11 +221,14 @@ const Class = () => {
               {/* minimum students */}
               <div className='col-md-4 mt-4'>
                 <FormControl fullWidth variant="outlined" size='small'>
-                  <InputLabel htmlFor="minimum-students">minimum students</InputLabel>
+                  <InputLabel htmlFor="minimum-students">Minimum Students</InputLabel>
                   <OutlinedInput
                     id="minimum-students"
                     margin="dense"
-                    label="minimum students"
+                    label="Minimum Students"
+                    name="minimumStudents"
+                  // value={formData.minimumStudents}
+                  // onChange={handleChange}
                   />
                 </FormControl>
               </div>
@@ -213,28 +236,32 @@ const Class = () => {
               {/* maximum students */}
               <div className='col-md-4 mt-4'>
                 <FormControl fullWidth variant="outlined" size='small'>
-                  <InputLabel htmlFor="maximum-students">maximum students</InputLabel>
+                  <InputLabel htmlFor="maximum-students">Maximum Students</InputLabel>
                   <OutlinedInput
                     id="maximum-students"
                     margin="dense"
-                    label="maximum students"
+                    label="Maximum Students"
+                    name="maximumStudents"
+                  // value={formData.maximumStudents}
+                  // onChange={handleChange}
                   />
                 </FormControl>
               </div>
-
             </div>
           </div>
         </DialogContent>
+
         <DialogActions className='d-flex justify-content-between mx-5 pb-4'>
-          <Button onClick={handleAdd} className='btn-info' disableElevation>
+          <Button onClick={handleAdd} className='btn btn-info'>
             Add
           </Button>
-          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={handleClose} color="primary">
+            Cancel
+          </Button>
         </DialogActions>
       </Dialog>
-
     </div>
   );
-}
+};
 
 export default Class;
