@@ -106,7 +106,6 @@ const Student = () => {
                                     <InputLabel htmlFor="student-name">student Name</InputLabel>
                                     <OutlinedInput
                                         id="student-name"
-                                        autoFocus
                                         margin="dense"
                                         label="student Name"
                                     />

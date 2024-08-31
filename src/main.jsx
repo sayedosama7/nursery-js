@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { HashRouter, Routes, Route } from "react-router-dom"; // استبدل createBrowserRouter بـ HashRouter
+import { HashRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import Layout from "./Components/Layout/Layout.jsx";
 import Services from './Pages/Services/Services.jsx';
@@ -19,7 +19,7 @@ const rootElement = document.getElementById("root");
 if (rootElement) {
   createRoot(rootElement).render(
     <React.StrictMode>
-      <HashRouter> {/* استخدم HashRouter هنا */}
+      <HashRouter>
         <Layout>
           <Routes>
             <Route path="/" element={<Dashboard />} />

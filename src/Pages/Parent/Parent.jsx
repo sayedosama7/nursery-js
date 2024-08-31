@@ -105,7 +105,6 @@ const Parent = () => {
                   <InputLabel htmlFor="Parent-name">Parent Name</InputLabel>
                   <OutlinedInput
                     id="Parent-name"
-                    autoFocus
                     margin="dense"
                     label="Parent Name"
                   />

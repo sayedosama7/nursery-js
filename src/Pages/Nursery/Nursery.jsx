@@ -106,7 +106,6 @@ const Nursery = () => {
                   <InputLabel htmlFor="Nursery-name">Nursery Name</InputLabel>
                   <OutlinedInput
                     id="Nursery-name"
-                    autoFocus
                     margin="dense"
                     label="Nursery Name"
                   // value={nurseryDetails.name}

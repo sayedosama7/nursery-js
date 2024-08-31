@@ -117,7 +117,6 @@ const Class = () => {
                   <InputLabel htmlFor="class-name">Class Name</InputLabel>
                   <OutlinedInput
                     id="class-name"
-                    autoFocus
                     margin="dense"
                     label="Class Name"
                     name="className"
