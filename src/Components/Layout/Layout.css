@@ -1,0 +1,61 @@
+.main {
+    margin-left: 260px !important;
+    padding-right: 50px !important;
+    margin-top: 0px !important;
+}
+
+.css-j87qpi {
+    padding: 5px !important;
+}
+
+.css-wgnj5a {
+    padding: 5px !important;
+}
+
+.css-cuplfq,
+.css-1q0v17x {
+    padding: 5px !important;
+}
+
+.btn-info {
+    background-color: #225C8B !important;
+    color: white !important;
+}
+
+.css-1ygcj2i-MuiTableCell-root,
+.css-1ex1afd-MuiTableCell-root {
+    display: none !important;
+}
+
+@media (max-width:600px) {
+    .MuiDrawer-root {
+        /* position: fixed; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .MuiDrawer-paper {
+        width: 100%;
+        max-width: 240px;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .main {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        margin-top: 30px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
